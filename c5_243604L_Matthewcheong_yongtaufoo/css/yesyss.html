@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Name</title>
+  <style>
+    /* Reset & base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Header & Navigation */
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #f4a460;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('restaurant.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+      font-size: 3em;
+    }
+    /* Content Sections */
+    .content {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .content h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+    /* Menu Gallery */
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .menu-item {
+      width: 300px;
+      margin: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .menu-item:hover {
+      transform: scale(1.03);
+    }
+    .menu-item img {
+      width: 100%;
+      display: block;
+    }
+    .item-details {
+      padding: 15px;
+    }
+    .item-details h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+    .item-details p {
+      margin-bottom: 5px;
+    }
+    /* Contact Form */
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    form label {
+      margin: 10px 0 5px;
+    }
+    form input,
+    form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 10px;
+      border: none;
+      background: #333;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #f4a460;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Restaurant Name</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to Our Restaurant</h1>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="content" id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="menu-item">
+        <img src="dish1.jpg" alt="Dish 1" />
+        <div class="item-details">
+          <h3>Grilled Salmon</h3>
+          <p>Freshly grilled salmon served with seasonal vegetables.</p>
+          <p><strong>$18.99</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="dish2.jpg" alt="Dish 2" />
+        <div class="item-details">
+          <h3>Steak Special</h3>
+          <p>Juicy steak with garlic butter and a side of fries.</p>
+          <p><strong>$24.99</strong></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="dish3.jpg" alt="Dish 3" />
+        <div class="item-details">
+          <h3>Veggie Delight</h3>
+          <p>A colorful mix of seasonal vegetables in a light sauce.</p>
+          <p><strong>$14.99</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="content" id="about">
+    <h2>About Us</h2>
+    <p>
+      We are dedicated to providing an exceptional dining experience with the freshest ingredients and a passion for flavor. Our talented chefs create dishes that are as beautiful as they are delicious.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="content" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Restaurant Name. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Basic JavaScript for form submission feedback
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Thank you for contacting us! We will get back to you shortly.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
