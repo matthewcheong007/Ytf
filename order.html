@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order NYP Yong Tau Foo online and estimate your total.">
+  <title>Order | NYP Yong Tau Foo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="NYP Yong Tau Foo home">
+        <h1>NYP Yong Tau Foo</h1>
+        <p>Fresh bowls, made daily</p>
+      </a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Open menu"><span></span></label>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="order.html" class="nav-cta active">Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="section compact">
+      <div class="section-title">
+        <span class="eyebrow">Order online</span>
+        <h1>Reserve lunch before you reach the canteen.</h1>
+        <p>Select a dish, add your preferred broth and pickup time, then review the estimated total before sending.</p>
+      </div>
+    </section>
+
+    <section class="form-layout" aria-label="Order form">
+      <div class="form-panel">
+        <h2>Your order</h2>
+        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" data-order-form data-friendly-form>
+          <div class="field-grid">
+            <div class="form-group">
+              <label for="food">Food item</label>
+              <select id="food" name="food" required>
+                <option value="Dry Yong Tau Foo">Dry Yong Tau Foo</option>
+                <option value="Soup Yong Tau Foo">Soup Yong Tau Foo</option>
+                <option value="Laksa Yong Tau Foo">Laksa Yong Tau Foo</option>
+                <option value="Tom Yum Yong Tau Foo">Tom Yum Yong Tau Foo</option>
+                <option value="Tofu">Tofu</option>
+                <option value="Stuffed Eggplant">Stuffed Eggplant</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Bitter Gourd">Bitter Gourd</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="form-group">
+              <label for="broth">Base</label>
+              <select id="broth" name="broth" required>
+                <option value="Dry sauce">Dry sauce</option>
+                <option value="Clear soup">Clear soup</option>
+                <option value="Laksa gravy">Laksa gravy</option>
+                <option value="Tom yum soup">Tom yum soup</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pickup">Pickup time</label>
+              <input type="time" id="pickup" name="pickup" min="10:00" max="18:00" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <span class="field-label">Ingredient preferences</span>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="ingredients" value="Tofu"> Tofu</label>
+              <label><input type="checkbox" name="ingredients" value="Fishball"> Fishball</label>
+              <label><input type="checkbox" name="ingredients" value="Vegetables"> Vegetables</label>
+              <label><input type="checkbox" name="ingredients" value="Eggplant"> Eggplant</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="special">Special requests</label>
+            <textarea id="special" name="special" placeholder="Less spicy, no chilli, extra sauce, or dietary notes"></textarea>
+          </div>
+
+          <button type="submit">Submit order</button>
+        </form>
+      </div>
+
+      <aside class="summary-panel" aria-label="Order summary">
+        <h2>Summary</h2>
+        <div class="summary-row">
+          <span>Item</span>
+          <strong data-summary-item>Dry Yong Tau Foo</strong>
+        </div>
+        <div class="summary-row">
+          <span>Quantity</span>
+          <strong data-summary-quantity>1</strong>
+        </div>
+        <div class="summary-row">
+          <span>Base</span>
+          <strong data-summary-broth>Dry sauce</strong>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span data-total>$4.50</span>
+        </div>
+        <p class="fine-print">Final total may change if the stall adjusts ingredients or portions during preparation.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <p>&copy; 2026 NYP Yong Tau Foo. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

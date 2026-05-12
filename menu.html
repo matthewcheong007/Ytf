@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse NYP Yong Tau Foo bowls and ingredients.">
+  <title>Menu | NYP Yong Tau Foo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="NYP Yong Tau Foo home">
+        <h1>NYP Yong Tau Foo</h1>
+        <p>Fresh bowls, made daily</p>
+      </a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Open menu"><span></span></label>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="order.html" class="nav-cta">Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="section">
+      <div class="section-title">
+        <span class="eyebrow">Menu</span>
+        <h1>Pick a bowl, then make it yours.</h1>
+        <p>Filter by signatures, soup bases, or ingredients. Prices are kept simple so it is easy to plan lunch before the queue forms.</p>
+      </div>
+
+      <div class="filter-bar" aria-label="Menu filters">
+        <button class="filter-button active" type="button" data-menu-filter="all">All</button>
+        <button class="filter-button" type="button" data-menu-filter="signature">Signatures</button>
+        <button class="filter-button" type="button" data-menu-filter="base">Soup bases</button>
+        <button class="filter-button" type="button" data-menu-filter="ingredient">Ingredients</button>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-card" data-category="base">
+          <img src="images/Tom yum.jpeg" alt="Tom Yum Yong Tau Foo">
+          <div class="menu-card-body">
+            <h3>Tom Yum Yong Tau Foo</h3>
+            <p>Bright, tangy broth with a spicy kick for bigger appetites.</p>
+            <div class="card-footer">
+              <span class="price">$5.50</span>
+              <a class="quick-link" href="order.html?item=Tom%20Yum%20Yong%20Tau%20Foo">Order</a>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="ingredient">
+          <img src="images/Tofu.jpg" alt="Tofu pieces">
+          <div class="menu-card-body">
+            <h3>Tofu</h3>
+            <p>Soft, classic, and ideal for soaking up your chosen broth.</p>
+            <div class="card-footer">
+              <span class="price">$0.80</span>
+              <a class="quick-link" href="order.html?item=Tofu">Order</a>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="ingredient">
+          <img src="images/Eggplant.jpg" alt="Stuffed eggplant">
+          <div class="menu-card-body">
+            <h3>Stuffed Eggplant</h3>
+            <p>Rich, savoury filling with a soft vegetable bite.</p>
+            <div class="card-footer">
+              <span class="price">$1.20</span>
+              <a class="quick-link" href="order.html?item=Stuffed%20Eggplant">Order</a>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="ingredient">
+          <img src="images/Vege.jpeg" alt="Fresh vegetables">
+          <div class="menu-card-body">
+            <h3>Vegetables</h3>
+            <p>Fresh greens that keep the bowl clean and balanced.</p>
+            <div class="card-footer">
+              <span class="price">$0.50</span>
+              <a class="quick-link" href="order.html?item=Vegetables">Order</a>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="signature">
+          <img src="images/Dry.jpeg" alt="Dry Yong Tau Foo">
+          <div class="menu-card-body">
+            <h3>Dry Yong Tau Foo</h3>
+            <p>Saucy, filling, and easy to enjoy between classes.</p>
+            <div class="card-footer">
+              <span class="price">$4.50</span>
+              <a class="quick-link" href="order.html?item=Dry%20Yong%20Tau%20Foo">Order</a>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="signature">
+          <img src="images/Laksa.jpeg" alt="Laksa Yong Tau Foo">
+          <div class="menu-card-body">
+            <h3>Laksa Yong Tau Foo</h3>
+            <p>Creamy laksa gravy with a comforting, aromatic finish.</p>
+            <div class="card-footer">
+              <span class="price">$5.50</span>
+              <a class="quick-link" href="order.html?item=Laksa%20Yong%20Tau%20Foo">Order</a>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="base">
+          <img src="images/soup.JPG" alt="Soup Yong Tau Foo">
+          <div class="menu-card-body">
+            <h3>Soup Yong Tau Foo</h3>
+            <p>Clear, gentle broth for a lighter campus lunch.</p>
+            <div class="card-footer">
+              <span class="price">$5.00</span>
+              <a class="quick-link" href="order.html?item=Soup%20Yong%20Tau%20Foo">Order</a>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="ingredient">
+          <img src="images/bitter.jpeg" alt="Bitter gourd">
+          <div class="menu-card-body">
+            <h3>Bitter Gourd</h3>
+            <p>A clean, slightly bitter ingredient for classic balance.</p>
+            <div class="card-footer">
+              <span class="price">$0.50</span>
+              <a class="quick-link" href="order.html?item=Bitter%20Gourd">Order</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <p>&copy; 2026 NYP Yong Tau Foo. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
